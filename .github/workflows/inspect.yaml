@@ -23,6 +23,7 @@ jobs:
 
       - name: Inspect cache before install
         shell: bash
+        continue-on-error: true
         run: ./inspect-cache.bash
 
       - name: Install dependencies
@@ -30,4 +31,5 @@ jobs:
 
       - name: Inspect cache after install
         shell: bash
+        continue-on-error: true
         run: ./inspect-cache.bash
